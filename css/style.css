@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    overflow: hidden;
+}
+
+
+
+/* HEADER */
+header{
+    height: 200px;
+    padding: 20px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.center{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+.logo{
+    width: 50%;
+}
+
+.logo img{
+    width: 90px;
+    height: 90px;
+}
+
+
+
+/* NAV */
+.menu{
+    padding-top: 30px;
+    width: 50%;
+    text-align: right;
+}
+
+.menu a{
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.menu a:hover{
+    color: #017143;
+}
+
+
+
+/* <!-- SEÇÃO sobre --> */
+section.sobre{
+    height: calc(100% - 200px);
+    position: relative;
+}
+
+
+.extras{
+    position: absolute;
+    bottom: -450px;
+    right: -500px;
+    width: 1100px;
+    height: 1100px;
+    border-radius: 50%;
+    background-color: #017143;
+}
+
+.extras img{
+    height: 500px;
+    width: auto;
+    margin-top: 50px;
+}
+
+/* --------------- Link das redes sociais */
+.social-media{
+    position: absolute;
+    right: 515px;
+    top: 200px;
+}
+
+.social-media a{
+    color: #000;
+    display: block;
+    font-size: 25px;
+    margin: 15px 0;
+    transition: color 0.3s;
+}
+
+.social-media a:hover{
+    color: #ddd;
+}
+
+/* --------------- Título e texto */
+.text-sobre{
+    margin-top: 100px;
+}
+
+.text-sobre h1{
+    font-size: 50px;
+}
+
+.text-sobre span{
+    color: #017143;
+}
+
+.text-sobre p{
+    margin: 20px 0;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    max-width: 800px;
+}
+
+.text-sobre button{
+    border: none;
+    background-color: #017143;
+    color: #fff;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.text-sobre button:hover{
+    background-color: #013a22;
+    font-weight: bold;
+}
+
+
+
+/* --------------- Título e texto */
+.produtos{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom: 20px;
+    justify-content: center;
+    left: 50%;
+}
+
+.produtos img{
+    height: 90px;
+    width: auto;
+    margin: 0 15px;
+    cursor: pointer;
+    transition: transform o.5s ease;
+}
+
+.produtos img:hover{
+    transform: translateY(-10px);
+}
+
+
+
+
+/* RESPONSIVIDADE */
+@media (max-width: 1430px){
+    .extras{
+        width: 1100px;
+        height: 1000px;
+    }
+
+    .extras img{
+        height: 450px;
+        margin-top: 20px;
+    }
+
+    .produtos{
+        left: 42%;
+    }
+
+    .produtos img{
+        height: 80px;
+    }
+
+    .text-sobre p{
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 1250px){
+    .extras{
+        width: 1000px;
+    }
+
+    .extras img{
+        height: 450px;
+    }
+}
+
+@media (max-width: 1130px){
+    .extras{
+        width: 900px;
+    }
+
+    .extras img{
+        height: 400px;
+    }
+
+    .produtos{
+        left: 50%;
+    }
+
+    .produtos img{
+        height: 70px;
+    }
+}
+
+@media (max-width: 1030px){
+    .extras{
+        width: 800px;
+    }
+
+    .extras img{
+        height: 400px;
+    }
+
+    .social-media a{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 930px){
+    .extras{
+        width: 770px;
+    }
+
+    .extras img{
+        height: 350px;
+    }
+
+    .social-media a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 888px){
+    .extras img, .produtos img{
+        display: none;
+    }
+
+    .extras{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 70px;
+        border-radius: 0;
+    }
+
+    .social-media{
+        position: static;
+        right: auto;
+        top: auto;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        justify-content: center;
+        gap: 30px;
+        align-items: center;
+        
+    }
+
+    .social-media a{
+        font-size: 25px;
+        display: inline-block;
+        margin: 0;
+    }
+
+    .text-sobre{
+        margin-top: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .text-sobre p{
+        max-width: 600px;
+        font-size: 16px;
+    }
+
+    .text-sobre button{
+        width: 200px;
+        height: 50px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 750px){
+    .center{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        max-width: 100%;
+    }
+
+    .logo{
+        width: 20%;
+    }
+
+    .menu{
+        width: 80%;
+    }
+}
